@@ -12,5 +12,30 @@ median(numArtefactos_int)
 
 #4
 mfv(numArtefactos_int)
+moda<-function(numArtefactos_int) {
+  u<-unique(numArtefactos_int) 
+  tab<-tabulate(match(numArtefactos_int,u))
+  u[tab==max(tab)]
+}
+moda(numArtefactos_int)
+#Moda: numero que se repite
+#u: valores unicos, solo sola 1 vez los numeros
+#tabular
 
 #5
+frecuencias <- table(numArtefactos_int)
+frecuencias.ordenada <- frecuencias[order(frecuencias, decreasing = TRUE)]
+frecuencias.ordenada
+moda <- frecuencias.ordenada[1]
+moda        
+
+#6
+quantile(numArtefactos_int)
+
+#7
+IQR(numArtefactos_int)
+
+#8
+range(numArtefactos_int)
+
+#9
