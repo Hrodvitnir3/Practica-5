@@ -31,6 +31,7 @@ moda
 
 #6
 quantile(numArtefactos_int)
+#cuartiles: medida de posicion, dividir la frecuencia en partes iguales
 
 #7
 IQR(numArtefactos_int)
@@ -39,3 +40,13 @@ IQR(numArtefactos_int)
 range(numArtefactos_int)
 
 #9
+var(numArtefactos_int)
+
+#10
+sd(numArtefactos_int)
+
+#11
+#12
+
+#13
+vector3<-c("21", "45", "33", "98", "34", "90", "67", "87", "45", "11", "73", "38", "28", "15", "50", "57", "12", "87", "29", "1")
