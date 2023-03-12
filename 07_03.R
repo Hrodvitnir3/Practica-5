@@ -39,6 +39,7 @@ Cuartiles2<-as.numeric(Cuartiles)
 
 #7
 RI<-IQR(numArtefactos_int)
+RI
 # El rango intercuartilico es la resta entre el primer y el tercer cuartil. Esto nos indica donde se agrupan el 50% de los datos, aproximadamente. 
 
 #8
@@ -48,10 +49,11 @@ rango_artefactos<-range(numArtefactos_int)
 
 #9
 Varianza<-var(numArtefactos_int) #Forma 1
-
+sd(numArtefactos_int)^2 #Forma 2. Ya que la varianza no es mas que la desviacion al cuadrado, lo podemos calcular asi tambien
 
 #10
-DesviacionEstandar<-sqrt(var(numArtefactos_int))
+sqrt(var(numArtefactos_int)) #Forma 1
+sd(numArtefactos_int) #Forma 2
 
 
 #11
@@ -77,7 +79,17 @@ View(Tabla1)
 
 #16
 skewness(vector3)
-#Esta funcion nos da informacion sobre la simetria en cuanto a la distribucion de los datos. En este caso, al estar cerca del 0, es simetrico. 
+#Esta funcion nos da informacion sobre la simetria en cuanto a la distribucion de los datos. En este caso, es una asimetrica positiva, pues el resultado es positivo
+hist(vector3)
+#Con ls funcion hist podemos comprobar que es positiva, ya que los mayores resultados se concentran a la izquierda del centro. 
+#La diferencia entre asimetría positiva, negativa y simétrica, es la posición de la curva respecto al centro. En el caso de la asimetría positiva, la curva quedaria a la izquierda del centro; 
+#en la asimetria negativa,la curva quedaría a la derecha del centro. En la simétrica, el pico álgido de la curva, coincidiria con el centro del eje x. 
+#Un ejemplo de asimétrica positiva, serían los resultados de una prueba muy dificil, donde la mayoria de los resultados se concrentren en los valores mas bajos del eje x.
+#Un ejemplo de asimétrica negativa, serían los resultados de una prueba muy facil, donde la mayoria de los resultados se concrentren en los valores mas altos del eje x.
+#Un ejemplo de asimétrica negativa, serían los resultados de una prueba muy facil, donde la mayoria de los resultados se concrentren en los valores mas altos del eje x.
+##Un ejemplo de simétrica, serían las alturas de un equipo de baloncesto, donde la mayoria de los resultados se concrentren en torno al punto central (la media)
+
 
 #17
 kurtosis(vector3)
+#Dado que el resulado es menor de 3, nuestros datos tienden a producir menos valores atípicos y menos extremos que en una distribución normal. A este curtois se le conoce como playkurtic 
